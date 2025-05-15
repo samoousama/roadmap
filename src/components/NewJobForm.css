@@ -1,0 +1,4 @@
+.my-quill-container .ql-editor {
+  min-height: 128px;
+  max-height: 500px;
+}

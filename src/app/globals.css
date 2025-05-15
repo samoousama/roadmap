@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url("/images/select_down.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: calc(100% - 0.75rem) 50% !important;
+}
+
+@layer base {
+  select:invalid,
+  select:has(option:checked[value=""]) {
+    @apply text-placeholder;
+  }
+}
+
+@layer components {
+  .foc {
+    @apply focus-visible:rounded-md focus-visible:outline focus-visible:outline-4 focus-visible:outline-primary-100;
+  }
+  .my-btn {
+    @apply foc rounded-md bg-primary px-4 py-2.5 font-semibold leading-6 text-white transition-all hover:bg-primary-dark disabled:opacity-50;
+  }
+  .my-btn-secondary {
+    @apply my-btn bg-primary-50 text-primary hover:bg-primary-100 hover:text-primary-dark;
+  }
+  .my-btn-outline {
+    @apply foc rounded-md border border-border bg-white px-4 py-2.5 font-semibold text-gray-700 hover:bg-gray-50 disabled:opacity-50;
+  }
+  .my-btn-text {
+    @apply foc font-semibold leading-6 text-primary transition-all hover:text-primary-dark disabled:opacity-50 group-hover:text-primary-dark;
+  }
+  .my-btn-link {
+    @apply my-btn-text text-text;
+  }
+  .my-btn-link-hover {
+    @apply foc rounded-md px-3 py-2 font-medium leading-6 text-text transition-all hover:bg-primary-100 hover:text-primary-dark disabled:opacity-50;
+  }
+  .my-btn-menu {
+    @apply my-btn-link-hover -mx-3 text-left;
+  }
+
+  .danger {
+    @apply border-danger text-danger hover:border-danger-dark hover:text-danger-dark focus-visible:outline-red-50;
+  }
+  .my-btn.danger {
+    @apply bg-danger text-white hover:bg-danger-dark focus-visible:outline-red-50;
+  }
+  .my-btn-secondary.danger {
+    @apply bg-red-50 text-danger hover:bg-red-100;
+  }
+  .my-btn-outline.danger {
+    @apply hover:bg-red-50;
+  }
+
+  .my-input {
+    @apply rounded-md border border-border bg-white px-3 py-2.5  placeholder:text-placeholder hover:border-primary-300 focus:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-100;
+  }
+
+  .grad-primary {
+    @apply absolute -right-[48rem] -top-[32rem] -z-10 h-[64rem] w-[64rem] [mask-image:radial-gradient(closest-side,white,transparent)] sm:-right-[42rem];
+  }
+  .my-container {
+    @apply w-full max-w-7xl;
+  }
+  .my-label {
+    @apply mb-1.5 block text-sm font-medium text-gray-700;
+  }
+  .my-menu {
+    /* @apply min-w-[10rem] z-[999] rounded-md px-4 py-1; */
+    @apply min-w-[10rem] px-4;
+  }
+
+  .my-tag {
+    @apply min-w-fit rounded-md border border-border px-1 py-0.5;
+  }
+}

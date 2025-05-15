@@ -1,0 +1,121 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  User
+  SuperAdmin
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model User {
+  id            String    @id @default(cuid())
+  role          UserRole  @default(User)
+  name          String?
+  firstName     String?
+  lastName      String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  companyName   String?
+  jobTitle      String?
+  linkedInUrl   String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  companyId     Int?
+  jobs          Job[]
+  accounts      Account[]
+  sessions      Session[]
+  company       Company?  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+}
+
+model Company {
+  id          Int      @id @default(autoincrement())
+  name        String?
+  description String?
+  email       String?
+  logoUrl     String?
+  website     String?
+  location    String?
+  linkedInUrl String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  jobs        Job[]
+  users       User[]
+}
+
+model Job {
+  id                 Int      @id @default(autoincrement())
+  status             String   @default("Draft")
+  position           String
+  slug               String   @unique @default(uuid())
+  employmentType     String
+  locations          String[]
+  primaryRole        String
+  tags               String[]
+  salaryMin          Int
+  salaryMax          Int
+  jobDescription     String
+  benefits           String[]
+  howToApply         String
+  applyUrlOrEmail    String
+  companyName        String
+  companyHQ          String
+  companyEmail       String
+  companyWebsite     String
+  companyLogo        String?
+  companyLinkedIn    String?
+  companyDescription String
+  company            Company? @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId          Int?
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId             String
+  postedAt           DateTime @default(now())
+  closedAt           DateTime @default(now())
+  rejectReason       String   @default("")
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}

@@ -1,0 +1,16 @@
+.my-richtext h2 {
+  @apply pt-4 text-xl font-semibold;
+}
+
+.my-richtext h3 {
+  @apply pt-2 text-lg font-semibold;
+}
+
+.my-richtext a {
+  @apply hover:text-primary-dark;
+}
+
+.my-richtext ul[role="list"] {
+  list-style: inside;
+  margin-left: 0.5rem;
+}
