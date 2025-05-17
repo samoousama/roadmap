@@ -21,7 +21,7 @@ export default async function Home() {
       {/* Hero section */}
       <Header />
       <section className="mx-auto max-w-7xl" id="home">
-        <div className="relative flex isolate overflow-hidden px-7">
+        <div className="relative flex isolate overflow-hidden px-8">
           <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:pt-[40px] lg:pb-[40px] lg:text-left">
             <h2 className="text-[65px] font-bold leading-[70px] text-[#1F2937]">
               Data Engineering Roadmap 2024
