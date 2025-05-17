@@ -275,3 +275,4 @@ export default async function JobDetails({ params: { slug } }: Props) {
     </div>
   );
 }
+

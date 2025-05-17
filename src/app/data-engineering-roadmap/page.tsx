@@ -18,7 +18,7 @@ export const revalidate = 86_400; // 60 * 60 * 24; revalidate at most every day
 export default async function Home() {
   return (
     <>
-      {/* Hero section */}
+      {/* Hero section **/}
       <Header />
       <section className="mx-auto max-w-7xl" id="home">
         <div className="relative flex isolate overflow-hidden px-8">
