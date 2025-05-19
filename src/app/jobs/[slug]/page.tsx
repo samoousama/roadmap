@@ -260,7 +260,7 @@ export default async function JobDetails({ params: { slug } }: Props) {
             </div>
           </div>
           {similarJobs.length > 0 && (
-            <div className="mt-6 flex flex-col gap-4">
+            <div className="mt-6 flex flex-col gap-4 p-0">
               <h2 className="mt-4 text-2xl text-text">Similar jobs</h2>
               {similarJobs.map((j) => (
                 <JobListItem job={j} key={j.id} />

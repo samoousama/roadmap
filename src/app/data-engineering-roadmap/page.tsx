@@ -20,7 +20,7 @@ export default async function Home() {
     <>
       {/* Hero section **/}
       <Header />
-      <section className="mx-auto max-w-7xl" id="home">
+      <section className="mx-auto max-w-7xl p-0" id="home">
         <div className="relative flex isolate overflow-hidden px-8">
           <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:pt-[40px] lg:pb-[40px] lg:text-left">
             <h2 className="text-[65px] font-bold leading-[70px] text-[#1F2937]">
@@ -761,7 +761,7 @@ export default async function Home() {
               />
               <div className="mt-[40px]">
                 <b className="text-[#000000] text-[18px] leading-[28px] block mb-[20px]">Follow me:</b>
-                <div className="mb-[20px]">
+                <div className="mb-[20px] p-0">
                 <a href="https://www.instagram.com/nataindata/" className="text-[#1F2937] text-[18px] border-[1px] bg-[#FFF7ED] rounded-[8px] border-[#FF7437] p-[10px] inline-flex items-center gap-[10px] font-medium hover:bg-[#FED7AA] min-w-[240px]">
                   <Image
                     src="/images/Insta.png"
@@ -814,7 +814,7 @@ export default async function Home() {
             <Link href="/jobs" className="my-btn-link text-[#9CA3AF] hover:text-[#fff]">
               Jobs
             </Link>
-            <Link href="/blog" className="my-btn-link text-[#9CA3AF] hover:text-[#fff]">
+            <Link href="/blog" className="my-btn-link text-[#9CA3AF] hover:text-[#fff] px-0">
               Blog
             </Link>
             <Link href="/blog/about/" className="my-btn-link text-[#9CA3AF] hover:text-[#fff]">
@@ -849,7 +849,7 @@ export default async function Home() {
                 Privacy
               </Link>
               .{" "}
-              <Link href="/legal/terms" className="foc hover:text-primary-700">
+              <Link href="/legal/terms termslinkanimat" className="foc hover:text-primary-700">
                 Terms
               </Link>
             </p>
