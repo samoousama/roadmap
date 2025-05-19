@@ -761,7 +761,7 @@ export default async function Home() {
               />
               <div className="mt-[40px]">
                 <b className="text-[#000000] text-[18px] leading-[28px] block mb-[20px]">Follow me:</b>
-                <div className="mb-[20px] p-0">
+                <div className="mb-[20px]">
                 <a href="https://www.instagram.com/nataindata/" className="text-[#1F2937] text-[18px] border-[1px] bg-[#FFF7ED] rounded-[8px] border-[#FF7437] p-[10px] inline-flex items-center gap-[10px] font-medium hover:bg-[#FED7AA] min-w-[240px]">
                   <Image
                     src="/images/Insta.png"

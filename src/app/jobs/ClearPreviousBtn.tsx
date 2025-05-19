@@ -7,7 +7,7 @@ export default function ClearPreviousBtn() {
   const search = useSearchParams();
   return (
     <button
-      className="my-btn-secondary mt-4 max-w-fit"
+      className="my-btn-secondary mt-4 max-w-fit p-0"
       onClick={() => {
         router.back();
       }}

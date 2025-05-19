@@ -45,7 +45,7 @@ export default function ProfileForm({ user }: { user: User }) {
       .then((r) => r.json())
       .then(() => {
         router.refresh();
-        toast.success("Profile updated");
+        toast.success("Profile updated !");
       })
       .catch((e) => {
         toast.error(e.message);
@@ -63,7 +63,7 @@ export default function ProfileForm({ user }: { user: User }) {
           <input
             id="firstName"
             name="firstName"
-            placeholder="Ex. Natalie"
+            placeholder="Ex. Natalie "
             className="my-input w-full"
             type="text"
             required

@@ -22,12 +22,12 @@ export default async function NewJob() {
   const company = await getCompany(session);
 
   return (
-    <div className=" relative min-h-screen bg-gray-50">
+    <div className="relative min-h-screen bg-gray-50">
       <AppHeader pathname="/jobs/new" />
       <div className="my-container mx-auto mt-8 px-4 pb-12 sm:mt-12">
         <div className="mx-auto flex max-w-5xl flex-col">
           <h2 className="text-lg">New job</h2>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-gray-500 p-0 ">
             Create a new job and reach the largest Data Engineering community on
             the web.
           </p>
