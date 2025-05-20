@@ -10,9 +10,8 @@ export const dynamic = "force-dynamic";
 export const revalidate = true;
 
 export const metadata: Metadata = {
-  title: "New job | Nata in Data",
+  title: "New job | Nata in Data ..",
 };
-
 export default async function NewJob() {
   const session = await getServerSession(authOptions);
   if (!session) {
@@ -20,7 +19,6 @@ export default async function NewJob() {
   }
   const user = await getUser(session);
   const company = await getCompany(session);
-
   return (
     <div className="relative min-h-screen bg-gray-50">
       <AppHeader pathname="/jobs/new" />

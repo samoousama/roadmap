@@ -1,7 +1,7 @@
 .my-quill-job-details .ql-editor {
+  max-height: initial !important;
+  min-height: initial !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  min-height: initial !important;
-  max-height: initial !important;
 }
 

@@ -12,7 +12,7 @@ export default function ClearPreviousBtn() {
         router.back();
       }}
     >
-      Try clearing last filter
+      Try clearing last filter !
     </button>
   );
 }

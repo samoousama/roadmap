@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = true;
 
 export const metadata: Metadata = {
-  title: "My jobs | Nata in Data",
+  title: "My jobs | Nata in Data ",
 };
 
 export default async function MyJobs() {
@@ -34,7 +34,6 @@ export default async function MyJobs() {
             </Link>
           )}
         </div>
-        
         <div className="mt-6 flex flex-col items-center gap-4">
           {jobs.map((j) => (
             <JobListItem job={j} key={j.id} user={user} />
@@ -46,7 +45,7 @@ export default async function MyJobs() {
               </p>
               <p className="max-w-3xl text-center text-placeholder">
                 Create your first job and reach the most qualified people in
-                Data Engineering, Data Science, AI/ML, Software Development
+                Data Engineering, Data Science, AI/ML Software Development
                 (Frontend, Backend), Design, Marketing, Testing and more.
               </p>
               <Link href="/jobs/new" className="my-btn mt-4 max-w-fit">
