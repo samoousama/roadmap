@@ -26,7 +26,7 @@ export default async function MyStyles() {
           <button className="my-btn-text danger">Btn text danger</button>
           <button className="my-btn-secondary">Btn secondary</button>
           <button className="my-btn-secondary danger">
-            Btn secondary danger
+            Btn secondary danger 
           </button>
           <button className="my-btn-outline">Btn outline</button>
           <button className="my-btn-outline danger">Btn outline dnager</button>

@@ -45,7 +45,7 @@ export default async function MyJobs() {
               </p>
               <p className="max-w-3xl text-center text-placeholder">
                 Create your first job and reach the most qualified people in
-                Data Engineering, Data Science, AI/ML Software Development
+                Data Engineering, Data Science, AI/ML Software Development 
                 (Frontend, Backend), Design, Marketing, Testing and more.
               </p>
               <Link href="/jobs/new" className="my-btn mt-4 max-w-fit">

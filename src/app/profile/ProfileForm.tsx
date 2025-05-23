@@ -89,7 +89,7 @@ export default function ProfileForm({ user }: { user: User }) {
       <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
         <div className="w-full">
           <label htmlFor="companyName" className="my-label">
-            Company name
+            Company Name
           </label>
           <input
             id="companyName"
@@ -102,7 +102,7 @@ export default function ProfileForm({ user }: { user: User }) {
         </div>
         <div className="w-full">
           <label htmlFor="jobTitle" className="my-label">
-            Job title
+            Job Title
           </label>
           <input
             id="jobTitle"

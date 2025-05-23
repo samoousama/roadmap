@@ -19,7 +19,7 @@ export async function generateMetadata({ searchParams }: Props) {
   return {
     title: "Data Engineering, Data Science, AI/ML jobs and more",
     description:
-      "Find the most qualified people for Software Development (Frontend, Backend), Design, Marketing, Testing jobs. Browse thousands of high-quality jobs today.",
+      "Find the most qualified people for Software Development (Frontend, Backend), Design, Marketing, Testing jobs. Browse thousands of high-quality jobs today",
   };
 }
 
@@ -78,7 +78,7 @@ export default async function Jobs({ searchParams }: Props) {
             {isEmpty && (
               <div className="flex flex-col items-center gap-4">
                 <p className="text-center font-semibold">
-                  👀 No jobs found by this search
+                  👀 No jobs found by this search 
                 </p>
                 <ClearPreviousBtn />
               </div>

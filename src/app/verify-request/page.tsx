@@ -42,7 +42,7 @@ export default function VerifyRequest() {
           <p className="text-center text-gray-500">
             Back to{" "}
             <Link href="/login" className="my-btn-text">
-              Log in
+              Log In
             </Link>
           </p>
         </div>

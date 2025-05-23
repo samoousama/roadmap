@@ -236,7 +236,7 @@ export default async function JobDetails({ params: { slug } }: Props) {
                       width={20}
                       height={20}
                     />
-                    LinkedIn
+                    Linkedin
                   </Link>
                 ) : null}
                 {job.companyWebsite ? (
@@ -265,7 +265,7 @@ export default async function JobDetails({ params: { slug } }: Props) {
               {similarJobs.map((j) => (
                 <JobListItem job={j} key={j.id} />
               ))}
-              <Link href="/jobs" className="my-btn-outline max-w-fit">
+              <Link href="/jobs" className="my-btn-outline max-w-fit px-0">
                 View all jobs
               </Link>
             </div>
