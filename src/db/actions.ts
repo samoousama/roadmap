@@ -164,6 +164,7 @@ export async function rejectJob(jobSlug: string, rejectReason: string) {
       rejectReason,
     },
   });
+  
   revalidatePath(`/jobs/edit/${jobSlug}`);
   const job = await getJob(jobSlug, true);
   const user = job?.user;
